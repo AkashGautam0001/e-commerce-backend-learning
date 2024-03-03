@@ -43,6 +43,7 @@ async function init() {
 	}
 }
 require("./routes/auth.route")(app);
+require("./routes/category.route")(app); //stich constroller in server.js
 
 app.listen(server_config.PORT, () => {
 	console.log(`App started at PORT : ${server_config.PORT}`);

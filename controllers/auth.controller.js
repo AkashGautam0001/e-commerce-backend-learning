@@ -44,7 +44,7 @@ exports.signin = async (req, res) => {
 		return res.status(401).send({ message: "Wrong password" });
 	}
 
-	const token = jwt.sign({ id: user.userId }, secret.secret, { expiresIn: 120 });
+	const token = jwt.sign({ id: user.userId }, secret.secret, { expiresIn: 600 });
 
 	res.status(200).send({
 		name: user.name,
